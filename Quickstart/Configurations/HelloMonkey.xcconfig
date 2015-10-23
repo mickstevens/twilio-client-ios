@@ -1,0 +1,14 @@
+//
+//  HelloMonkey.xcconfig
+//
+
+OTHER_LDFLAGS = $(inherited) -lTwilioClient -ObjC -lcrypto -lssl
+
+PACKAGE_ROOT = $(SRCROOT)/..
+TWILIO_SDK_HEADERS_DIR = $(PACKAGE_ROOT)/Headers
+TWILIO_SDK_LIBRARY_DIR = $(PACKAGE_ROOT)/Libraries
+
+HEADER_SEARCH_PATHS = $(inherited) $(TWILIO_SDK_HEADERS_DIR)
+LIBRARY_SEARCH_PATHS = $(inherited) $(TWILIO_SDK_LIBRARY_DIR)
+
+COMMON_ASSETS_DIR = $(PACKAGE_ROOT)/Resources
